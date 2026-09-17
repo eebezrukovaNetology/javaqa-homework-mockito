@@ -3,14 +3,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MovieManagerTest {
-
     @Test
     public void shouldAddAllMovies() {
         MovieManager manager = new MovieManager();
         manager.add("Один дома");
         manager.add("Брат");
         manager.add("Титаник");
-
         String[] expected = {"Один дома", "Брат", "Титаник"};
         assertArrayEquals(expected, manager.findAll());
     }
@@ -24,7 +22,6 @@ public class MovieManagerTest {
         manager.add("Аватар");
         manager.add("Такси");
         manager.add("Матрица");
-
         String[] expected = {"Матрица", "Такси", "Аватар", "Титаник", "Брат"};
         assertArrayEquals(expected, manager.findLast());
     }
@@ -36,8 +33,6 @@ public class MovieManagerTest {
         manager.add("Брат");
         manager.add("Титаник");
         manager.add("Аватар");
-
-
         String[] expected = {"Аватар", "Титаник", "Брат"};
         assertArrayEquals(expected, manager.findLast());
     }
